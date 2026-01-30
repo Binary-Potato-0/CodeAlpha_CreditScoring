@@ -41,7 +41,7 @@ class CreditScoringModel:
         data_path : str
             Path to the credit dataset
         """
-        self.data_path = data_path
+        self.data_path = "credit_data.csv"
         self.data = None
         self.X_train = None
         self.X_test = None
@@ -136,8 +136,7 @@ class CreditScoringModel:
         axes[1].set_title('Credit Risk Percentage', fontsize=14, fontweight='bold')
         
         plt.tight_layout()
-        plt.savefig('/home/claude/CodeAlpha_CreditScoring/target_distribution.png', 
-                    dpi=300, bbox_inches='tight')
+        plt.savefig('target_ditribution.png', dpi=300, bbox_inches='tight')
         plt.close()
         print("\n✓ Target distribution visualization saved!")
         
@@ -166,8 +165,7 @@ class CreditScoringModel:
             plt.suptitle('Numerical Features Distribution by Credit Risk', 
                         fontsize=16, fontweight='bold', y=1.001)
             plt.tight_layout()
-            plt.savefig('/home/claude/CodeAlpha_CreditScoring/numerical_features.png', 
-                       dpi=300, bbox_inches='tight')
+            plt.savefig('numerical_features.png', dpi=300, bbox_inches='tight')
             plt.close()
             print("✓ Numerical features visualization saved!")
         
@@ -182,8 +180,7 @@ class CreditScoringModel:
                        cbar_kws={"shrink": 0.8})
             plt.title('Feature Correlation Matrix', fontsize=16, fontweight='bold', pad=20)
             plt.tight_layout()
-            plt.savefig('/home/claude/CodeAlpha_CreditScoring/correlation_matrix.png', 
-                       dpi=300, bbox_inches='tight')
+            plt.savefig('correlation_matrix.png', dpi=300, bbox_inches='tight')
             plt.close()
             print("✓ Correlation matrix saved!")
     
@@ -422,8 +419,7 @@ class CreditScoringModel:
         axes[1, 2].axis('off')
         
         plt.tight_layout()
-        plt.savefig('/home/claude/CodeAlpha_CreditScoring/model_comparison.png', 
-                   dpi=300, bbox_inches='tight')
+        plt.savefig('model_comparison.png', dpi=300, bbox_inches='tight')
         plt.close()
         print("✓ Model comparison plot saved!")
     
@@ -446,8 +442,7 @@ class CreditScoringModel:
         plt.legend(loc="lower right", fontsize=11, frameon=True, shadow=True)
         plt.grid(alpha=0.3)
         plt.tight_layout()
-        plt.savefig('/home/claude/CodeAlpha_CreditScoring/roc_curves.png', 
-                   dpi=300, bbox_inches='tight')
+        plt.savefig('roc_curves.png', dpi=300, bbox_inches='tight')
         plt.close()
         print("✓ ROC curves saved!")
     
@@ -470,8 +465,7 @@ class CreditScoringModel:
             ax.set_xlabel('Predicted', fontsize=12, fontweight='bold')
         
         plt.tight_layout()
-        plt.savefig('/home/claude/CodeAlpha_CreditScoring/confusion_matrices.png', 
-                   dpi=300, bbox_inches='tight')
+        plt.savefig('confusion_matrices.png', dpi=300, bbox_inches='tight')
         plt.close()
         print("✓ Confusion matrices saved!")
     
@@ -500,8 +494,7 @@ class CreditScoringModel:
                 axes[idx].grid(axis='x', alpha=0.3)
         
         plt.tight_layout()
-        plt.savefig('/home/claude/CodeAlpha_CreditScoring/feature_importance.png', 
-                   dpi=300, bbox_inches='tight')
+        plt.savefig('feature_importance.png', dpi=300, bbox_inches='tight')
         plt.close()
         print("✓ Feature importance plot saved!")
     
